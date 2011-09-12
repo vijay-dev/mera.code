@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+<script>
+	$(document).ready(function(){
+			$("TR").hover(
+				  function () {
+					$(this).css("background-color", "#ccc");
+					$(this).css("cursor", "pointer");
+					$(this).find("TD").css("color", "#fff");
+					$(this).find("a").css("color", "#fff");
+				  },
+				  function () {
+					$(this).css("background-color", "#fff");
+					$(this).css("cursor", "default");
+					$(this).find("TD").css("color", "#000");
+					$(this).find("a").css("color", "#000");
+				  }
+			);
+			$("TR").click(
+				  function(){
+	  				window.location=$(this).find("a").attr("href"); return false;
+				  }
+			);
+
+	});
+</script>
+</head>
+
+<body>
+
+<table width="200" border="1" style="border:1px solid #000; border-collapse:collapse">
+  <tr id="1">
+    <td id="5">a</td>
+    <td><a href="vijay">b</a></td>
+    <td>c</td>
+  </tr>
+  <tr id="2">
+    <td id="5">a</td>
+    <td>b</td>
+    <td>c</td>
+  </tr>
+  <tr id="3">
+    <td id="5">a</td>
+    <td>b</td>
+    <td>c</td>
+  </tr>
+</table>
+
+</body>
+</html>
